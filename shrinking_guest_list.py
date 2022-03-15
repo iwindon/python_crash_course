@@ -1,8 +1,6 @@
 from operator import inv
 
-invites = ["Christina Ricci", "Patrick Stewart", "Mozart"]
-
-
+invites = ["Christina Ricci", "Bach", "Mozart"]
 
 for i in range(0,3):
     print(f"Greetings {invites[i].title()} you are herby invited to my dinner party, please RSVP")
@@ -17,7 +15,7 @@ for i in range(0,3):
 for i in range(0,3):
     print(f"{invites[i].title()}, I found a larger table, so I am inviting 3 more people.")
 
-invites.insert(0, "Bach")
+invites.insert(0, "Patrick Stewart")
 invites.insert(2, "Dave")
 invites.append("Mark")
 
