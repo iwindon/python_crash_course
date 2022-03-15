@@ -1,36 +1,50 @@
 from operator import inv
 
-invites = ["Christina Ricci", "Bach", "Mozart"]
+# original list to invite to my dinner party
+invites = ["Christina Ricci", "Emma Watson", "Robert Downey Jr."]
 
-for i in range(0,3):
+# using a for loop to invite each person based on the length of the list.
+for i in range(0,len(invites)):
     print(f"Greetings {invites[i].title()} you are herby invited to my dinner party, please RSVP")
 
+# Sadly Robert is unable to attend, lets invite Chris Evans instead.
 unable_attend = invites.pop(2)
-print(f"{unable_attend.title()}, is unable to attend.")
-invites.append("Beethoven")
+print(f"\n{unable_attend.title()}, is unable to attend.")
+invites.append("Chris Evans")
 
-for i in range(0,3):
+# now we resend the list to everyone
+print("\n")
+for i in range(0,len(invites)):
     print(f"Greetings {invites[i].title()} you are herby invited to my dinner party, please RSVP")
 
-for i in range(0,3):
+# I found a larger table, so now I can invite more people.
+print("\n")
+for i in range(0,len(invites)):
     print(f"{invites[i].title()}, I found a larger table, so I am inviting 3 more people.")
 
 invites.insert(0, "Patrick Stewart")
-invites.insert(2, "Dave")
-invites.append("Mark")
+invites.insert(2, "Bradley Cooper")
+invites.append("Samuel L. Jackson")
 
-for i in range(0,5):
+# now we send out the invite to everyone.
+print("\n")
+for i in range(0,len(invites)):
     print(f"Greetings {invites[i].title()} you are herby invited to my dinner party, please RSVP")
 
-for i in range(0,4):
+# turns out the table won't arrive in time, supply chain issues.  So we have to remove everyone but two.
+print("\n")
+for i in range(0,(len(invites)-2)):
     noroom = invites.pop()
-    print(f"Sorry {noroom.title()}, however the table won't arrive in time so I must recend my invite.")
+    print(f"Sorry {noroom.title()}, however the table won't arrive in time so I must rescind my invite.")
     
-
-for i in range(0,2):
+# send out the invite again to let the two remaining know they are still invited.
+print("\n")
+for i in range(0,len(invites)):
     print(f"{invites[i].title()}, you are still invited to my dinner party.")
 
+# remove everyone from the list and validate the list is empty.
 del invites[0]
 del invites[0]
+print("\n")
 print(invites)
 
